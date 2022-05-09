@@ -15,6 +15,11 @@
 system\
 %{nil}
 
+# want adreno quirks is required for browser at least, and other subtle issues
+%define android_config \
+#define WANT_ADRENO_QUIRKS 1\
+%{nil}
+
 #decomission sys-fs-pstore.service
 %define makefstab_skip_entries /sys/fs/pstore
 
